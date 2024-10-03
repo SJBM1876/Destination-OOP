@@ -1,28 +1,28 @@
-const Plane  = require('../classes/Plane.js');
-const Airport = require('../classes/Airport.js');
+const Plane = require(`../classes/Plane.js`)
+const Airport = require(`../classes/Airport.js`)
 const { describe, test, expect, beforeEach } = require("@jest/globals");
 
-describe('Airport Class', () => {
-  test('should assign name and planes correctly', () => {
-    const airport = new Airport('Manchester International');
-    expect(airport.name).toBe('Manchester International');
-    expect(airport.getPlanes()).toEqual([]);
-  });
+describe(`Test for Airport class:`, () => {
+    
+    let airport;
 
-  test('should have the correct airportCode', () => {
-    expect(Airport.airportCode).toBe('MAN');
-  });
-
-  test('should initialize planes as an empty array', () => {
-    const airport = new Airport('Manchester International');
-    expect(airport.getPlanes()).toHaveLength(0);
-  });
-
-  test('should add planes to the planes array', () => {
-    const airport = new Airport('Manchester International');
-    const plane = new Plane('JET2', 'MAN');
-    airport.addPlane(plane);
-    expect(airport.getPlanes()).toContain(plane);
-  });
-});
+    beforeEach(() => {
+        airport = new Airport(`London Heathrow`)
+    })
+    
+    test(`Assigns airport name correctly`, () => {
+        expect(airport.name).toBe(`London Heathrow`);
+    })
+    test(`Static poperty airportCode is correct`, () => {
+        expect(Airport.airportCode).toBe(`LHR`);
+    })
+    test(`planes is initialized as an empty array`, () => {
+        expect(airport.getPlanes()).toEqual([]);
+    })
+    test(`Assigns a plane to the array of planes`, () => {
+        const plane = new Plane(`MultiJet`, `John F. Kennedy International`, `London Heathrow`);
+        airport.addPlane(plane);
+        expect(airport.getPlanes()).toEqual([plane]);
+    })
+})
 
