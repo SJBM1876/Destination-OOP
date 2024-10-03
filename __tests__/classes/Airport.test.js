@@ -1,5 +1,5 @@
-const Airport = require('../Airport');
-const Plane = require('../Plane');
+const { Airport } = require('../Airport');
+
 
 describe('Airport Class', () => {
   test('should assign name and planes correctly', () => {
