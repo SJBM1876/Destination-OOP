@@ -1,26 +1,27 @@
-const Plane = require('../classes/Plane.js');
-const Person = require('../classes/Person.js');
+const Plane = require(`../classes/Plane.js`)
+const Person = require(`../classes/Person.js`)
 const { describe, test, expect, beforeEach } = require("@jest/globals");
 
+describe(`Test for Plane class:`, () => {
+    
+    let plane;
 
-describe('Plane Class', () => {
-    test('should assign company, origin, and destination correctly', () => {
-        const plane = new Plane('JE2', 'LON', 'MAN');
-        expect(plane.company).toBe('JET2');
-        expect(plane.origin).toBe('LON');
-        expect(plane.destination).toBe('MAN');
-    });
-
-    test('should initialize passengers as an empty array', () => {
-        const plane = new Plane('JET2', 'MAN');
+    beforeEach(() => {
+        plane = new Plane(`MultiJet`, `John F. Kennedy International`, `London Heathrow`);
+    })
+    
+    test(`Assigns compnay, origin and destination correctly`, () => {
+        expect(plane.company).toBe(`MultiJet`);
+        expect(plane.origin).toBe(`John F. Kennedy International`);
+        expect(plane.destination).toBe(`London Heathrow`);
+    })
+    test(`passengers is initialized as an empty array`, () => {
         expect(plane.getPassengers()).toEqual([]);
-    });
-
-    test('should add a person to the passengers array', () => {
-        const plane = new Plane('JET2', 'MAN');
-        const person = new Person('Ben');
+    })
+    test(`Assign a Person as a passenger of a plane`, () => {
+        const person = new Person(`John`, `London Heathrow`);
         plane.addPassenger(person);
-        expect(plane.getPassengers()).toContain(person);
-    });
-});
+        expect(plane.getPassengers()).toEqual([person]);
+    })
+})
 

@@ -2,6 +2,7 @@ const Bag = require(`../classes/Bag.js`)
 const Person = require(`../classes/Person.js`)
 const { describe, test, expect, beforeEach } = require("@jest/globals");
 
+
 describe(`Test for Bad class:`, () => {
     
     let bag;
