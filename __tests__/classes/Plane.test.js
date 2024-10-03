@@ -1,4 +1,6 @@
-const { Plane } = require('../Plane');
+const Plane = require('../classes/Plane.js');
+const Person = require('../classes/Person.js');
+const { describe, test, expect, beforeEach } = require("@jest/globals");
 
 
 describe('Plane Class', () => {
