@@ -1,5 +1,6 @@
-const { Airport } = require('../Airport');
-
+const Plane  = require('../classes/Plane.js');
+const Airport = require('../classes/Airport.js');
+const { describe, test, expect, beforeEach } = require("@jest/globals");
 
 describe('Airport Class', () => {
   test('should assign name and planes correctly', () => {

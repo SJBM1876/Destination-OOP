@@ -1,4 +1,4 @@
-const Person = require("../classes/Person.js")
+const Person = require('../classes/Person.js');
 
 beforeEach(() => {
     let person = new Person("Ben", "Paris")
