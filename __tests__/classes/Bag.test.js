@@ -1,4 +1,4 @@
-const Bag = require("../classes/Bag.js")
+const Bag = require('../classes/Bag.js')
 
 beforeEach(() => {
     let bag = new Bag(50, 111)
