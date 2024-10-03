@@ -1,5 +1,4 @@
-class Airport {
-    
+class Plane {
 }
 
 module.exports = Plane;

@@ -1,5 +1,5 @@
-const Plane = require('../Plane');
-const Person = require('../Person');
+const { Plane } = require('../Plane');
+
 
 describe('Plane Class', () => {
     test('should assign company, origin, and destination correctly', () => {
