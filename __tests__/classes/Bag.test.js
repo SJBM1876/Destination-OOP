@@ -1,7 +1,10 @@
 const Bag = require("../classes/Bag.js")
+const Person = require("../classes/Person.js")
+
+let bag
 
 beforeEach(() => {
-    let bag = new Bag(50, 111)
+    bag = new Bag(50, 111)
 })
 
 test("can create an instance of the Bag class", () => {
