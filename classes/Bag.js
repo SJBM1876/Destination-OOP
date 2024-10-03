@@ -1,5 +1,6 @@
 class Bag {
 #owner
+
     constructor(weight, id) {
         this.weight = weight
         this.id = id
